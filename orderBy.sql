@@ -26,7 +26,16 @@ from Learning.sales
 order by  total_earnings desc ;
 
 
-select *, cast(salary as int) + cast(COMMISSION as int)as total_earnings,
-round((salary + COMMISSION),2) as half_earnings
-from Learning.sales
-order by  total_earnings desc;
+SELECT
+salesperson_id,
+first_name,
+salary,
+commission
+FROM Learning.sales
+ORDER BY commission ASC,salary DESC;
+
+
+
+
+
+
