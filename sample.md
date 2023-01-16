@@ -13,7 +13,7 @@ Delete from table where condition;
 # Null First/Null Last
 Similarly to SQLite, MySQL treats NULL values as lower than any non-NULL value; thus, by default, it puts these values first when sorting in ascending order and last when sorting in descending order. However, MySQL does not support the NULLS FIRST / NULLS LAST options, which makes it more challenging to change the default behavior.
 
-# cumulative distribution:
+# Cumulative distribution:
 'https://www.sqlservertutorial.net/sql-server-window-functions/sql-server-cume_dist-function/'
 
 it calculates the relative position of a value in a group of values.
@@ -35,3 +35,16 @@ When using window functions, you can apply the same aggregates that you would un
          (PARTITION BY start_terminal) AS running_avg
     `FROM tutorial.dc_bikeshare_q1_2012
     WHERE start_time < '2012-01-08'
+
+# GROUP_CONCAT()
+MySQL GROUP_CONCAT() function returns a string with concatenated non-NULL value from a group.
+
+Returns NULL when there are no non-NULL values.
+
+    SELECT sell_date,
+       COUNT(DISTINCT(product), sell_date) AS num_sold, 
+       GROUP_CONCAT(DISTINCT product ORDER BY product) AS products
+    FROM Activities
+    GROUP BY sell_date
+
+'https://www.w3resource.com/mysql/aggregate-functions-and-grouping/aggregate-functions-and-grouping-group_concat.php'
