@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../azure/.idea/azure.iml" filepath="$PROJECT_DIR$/../azure/.idea/azure.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/sql-for-living.iml" filepath="$PROJECT_DIR$/.idea/sql-for-living.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Python-Practice/tiny_progress/.idea/tiny_progress.iml" filepath="$PROJECT_DIR$/../Python-Practice/tiny_progress/.idea/tiny_progress.iml" />
     </modules>
   </component>
 </project>
